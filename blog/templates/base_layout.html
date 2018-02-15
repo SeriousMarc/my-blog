@@ -4,11 +4,14 @@
     <head>
         <meta charset="utf-8">
         <title>My Blog</title>
+        <link href="https://fonts.googleapis.com/css?family=Peralta" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
         {% block head %}{% endblock %}
     </head>
     <body>
       <h1>Welcome to My Blog</h1>
+      <h2><a href="{% url 'accounts:logout'%}">Logout</a></h2>
         <div class="content">
             {% block content %}
             {% endblock %}
